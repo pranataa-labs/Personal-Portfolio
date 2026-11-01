@@ -190,7 +190,7 @@ export default function InkOrbitFeatures({
 // true once the element has been on screen
 function useInView(threshold = 0.2) {
   const ref = React.useRef(null as HTMLElement | null)
-  const [inView, setInView] = React.useState(false)
+  const [inView, setInView] = React.useState(true)
   React.useEffect(() => {
     const el = ref.current
     if (!el || inView) return
@@ -612,7 +612,7 @@ const IB_CSS = `
 .ib-root :where(h2,h3,p){margin:0;padding:0;font-size:inherit;font-weight:inherit}
 .ib-shell{width:100%;max-width:1180px;margin:0 auto;container-type:inline-size}
 .ib-sec{position:relative;background:var(--ib-paper);border:1px solid var(--ib-line);padding:clamp(36px,6cqw,72px) clamp(16px,4cqw,48px);transition:background-color .45s,border-color .45s}
-.ib-reveal{opacity:0;transform:translateY(18px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.ib-reveal{opacity:1;transform:none;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
 .ib-reveal[data-in="true"]{opacity:1;transform:none}
 .ib-head{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;margin-bottom:clamp(28px,4.5cqw,52px)}
 .ib-tag{display:inline-block;padding:4px 10px;font-size:11.5px;letter-spacing:.02em;color:var(--ib-soft);background:var(--ib-card);border:1px solid var(--ib-line)}

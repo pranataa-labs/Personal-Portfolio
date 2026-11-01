@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { useLenis } from "@/hooks/use-lenis"
 import { CustomCursor } from "@/components/custom-cursor"
 import { Navbar } from "@/components/navbar"
@@ -11,6 +12,15 @@ import { ContactSection } from "@/components/contact-section"
 export function App() {
   // Initialize Lenis smooth inertial scrolling
   useLenis(true)
+
+  useEffect(() => {
+    if (window.location.hash) {
+      const el = document.querySelector(window.location.hash)
+      if (el) {
+        el.scrollIntoView({ behavior: "instant" })
+      }
+    }
+  }, [])
 
   return (
     <div className="min-h-screen bg-background text-foreground relative selection:bg-foreground selection:text-background grain">
