@@ -53,6 +53,7 @@ export const projects: Project[] = [
       "Sentiment timeline for how the conversation went",
     ],
     mark: "STT / LLM",
+    repo: `${GH}/EchoMind-Audio-Intelligence`,
   },
   {
     slug: "clinic-queue",
