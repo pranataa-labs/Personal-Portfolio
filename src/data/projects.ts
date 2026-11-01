@@ -34,7 +34,7 @@ export const projects: Project[] = [
       "Live courier telemetry over Laravel Reverb WebSockets",
       "Public tracking by waybill number or UUIDv4 token, with 1-tap WhatsApp to the courier",
     ],
-    image: "/projects/fleetpulse.webp",
+    image: "./projects/fleetpulse.webp",
     repo: `${GH}/FleetPulse`,
   },
   {
@@ -68,8 +68,8 @@ export const projects: Project[] = [
       "Full-screen TV display built for a waiting room",
       "Audio announcements for every call",
     ],
-    image: "/projects/clinic-queue.webp",
-    gallery: ["/projects/clinic-queue.webp", "/projects/clinic-console.webp"],
+    image: "./projects/clinic-queue.webp",
+    gallery: ["./projects/clinic-queue.webp", "./projects/clinic-console.webp"],
     repo: `${GH}/Clinic-Queue-Management-System`,
   },
   {
@@ -86,7 +86,7 @@ export const projects: Project[] = [
       "Admin backoffice for titles, stock and orders",
       "Postal-code autofill at checkout",
     ],
-    image: "/projects/cellar-door.webp",
+    image: "./projects/cellar-door.webp",
     repo: `${GH}/cellar-door-bookstore`,
   },
   {
@@ -103,7 +103,7 @@ export const projects: Project[] = [
       "Unit tests for catalog integrity and order totals",
       "Separate maison admin for the catalog and orders",
     ],
-    image: "/projects/emeraude.webp",
+    image: "./projects/emeraude.webp",
     repo: `${GH}/Emeraude-Botanica`,
   },
   {
@@ -120,8 +120,8 @@ export const projects: Project[] = [
       "Admin portal behind an obfuscated route",
       "Light, dark and system theme support",
     ],
-    image: "/projects/fleure.webp",
-    gallery: ["/projects/fleure.webp", "/projects/fleure-admin.webp"],
+    image: "./projects/fleure.webp",
+    gallery: ["./projects/fleure.webp", "./projects/fleure-admin.webp"],
     repo: `${GH}/Fleure-Flower`,
   },
   {
@@ -138,8 +138,8 @@ export const projects: Project[] = [
       "Google OAuth sign-in",
       "Revenue analytics and live order tracking",
     ],
-    image: "/projects/cakeluv.webp",
-    gallery: ["/projects/cakeluv.webp", "/projects/cakeluv-admin.webp"],
+    image: "./projects/cakeluv.webp",
+    gallery: ["./projects/cakeluv.webp", "./projects/cakeluv-admin.webp"],
     repo: `${GH}/Cake-Luv`,
   },
   {
@@ -156,7 +156,7 @@ export const projects: Project[] = [
       "Midtrans payment gateway",
       "Audit log for every admin action",
     ],
-    image: "/projects/eventix.webp",
+    image: "./projects/eventix.webp",
     repo: "https://github.com/PranataGM/Eventix-THEATRE",
   },
   {
@@ -173,7 +173,7 @@ export const projects: Project[] = [
       "Vendor return processing",
       "Inventory turnover forecasting",
     ],
-    image: "/projects/inventory.webp",
+    image: "./projects/inventory.webp",
     repo: `${GH}/Inventory-Management-System`,
   },
   {
@@ -190,7 +190,7 @@ export const projects: Project[] = [
       "Transparent cash-flow reports",
       "Admin tools for the committee",
     ],
-    image: "/projects/simasjid.webp",
+    image: "./projects/simasjid.webp",
     repo: `${GH}/Mosque-Management-System`,
   },
   {
@@ -224,7 +224,7 @@ export const projects: Project[] = [
       "Bit error rate above 40% even at JPEG quality 95",
       "Residual maps amplified 30× to show where pixels changed",
     ],
-    image: "/projects/stego.webp",
+    image: "./projects/stego.webp",
     repo: `${GH}/Steganografi-Whatsapp`,
   },
   {

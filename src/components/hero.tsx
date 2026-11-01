@@ -75,7 +75,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row items-center gap-6 my-2">
               <div className="relative w-28 h-28 sm:w-32 sm:h-32 shrink-0 rounded-xl overflow-hidden border border-border bg-muted/40 shadow-inner">
                 <img
-                  src="/pranataa.webp"
+                  src="./pranataa.webp"
                   alt="Muhammad Aria Sastra"
                   className="w-full h-full object-cover object-top grayscale contrast-125 group-hover:scale-105 transition-transform duration-500"
                   loading="eager"
