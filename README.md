@@ -1,5 +1,7 @@
 # Personal Engineering Portfolio
 
+[`react`](https://github.com/topics/react) • [`portfolio`](https://github.com/topics/portfolio) • [`typescript`](https://github.com/topics/typescript) • [`developer-portfolio`](https://github.com/topics/developer-portfolio) • [`tailwind`](https://github.com/topics/tailwind) • [`shadcn-ui`](https://github.com/topics/shadcn-ui) • [`framer-motion`](https://github.com/topics/framer-motion) • [`vite`](https://github.com/topics/vite)
+
 An interactive, production-grade monochrome portfolio for **Muhammad Aria Sastra**, showcasing full-stack web applications, multi-tenant SaaS architectures, audio intelligence platforms, and machine learning research developed under **pranataa-labs**.
 
 Engineered with **React 19**, **TypeScript**, **Vite 6**, **Tailwind CSS v4**, and **shadcn-ui**, featuring smooth monochrome physics and animations powered by **21st DEV** and **Framer Motion**.
