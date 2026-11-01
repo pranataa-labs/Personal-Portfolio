@@ -1,48 +1,106 @@
-# 🌐 Personal Engineering Portfolio
+# Personal Engineering Portfolio
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+An interactive, monochrome full-stack engineering portfolio for **Muhammad Aria Sastra**, showcasing production applications, multi-tenant SaaS architectures, audio intelligence platforms, and machine learning research developed under **pranataa-labs**.
 
-An interactive, responsive personal portfolio website showcasing software engineering projects, data science workflows, quantitative research models, and technical skills.
+Built with **React 19**, **TypeScript**, **Vite 6**, **Tailwind CSS v4**, and **shadcn-ui**, featuring smooth monochrome animations powered by **21st DEV** and **Framer Motion**.
 
 ---
 
-## ✨ Key Portfolio Features
+## Key Features
 
-- **Interactive User Experience:** Fluid particle animations, smooth navigation transitions, and responsive section tracking.
-- **Project Showcase:** Curated gallery presenting full-stack web applications, e-commerce platforms, and quantitative models with live preview links.
-- **Skills & Technical Arsenal:** Categorized technology stack breakdown covering Frontend, Backend, Databases, DevOps, and Machine Learning.
-- **Contact Channel:** Integrated contact portal for technical inquiries and collaborations.
-
----
-
-## 🛠️ Technology Stack & Architecture
-
-- **Markup & Semantics:** HTML5
-- **Styling & Motion:** Modern CSS3, Flexbox, CSS Grid, and Keyframe Animations
-- **Interactivity:** Vanilla Modern JavaScript (ES6+)
+- **21st DEV Ink Orbit Features:** Standalone interactive bento featuring live diagrams: team edits flowing through an engineering hub, active tool integration synchronization, and scrubbable predictive velocity charts.
+- **21st DEV Animated Hero:** Dynamic spring-motion text cycling with responsive typography and quick-action callouts.
+- **Pure Monochrome Design System:** Slate/neutral OKLCH color palette with zero AI color slop, custom trailing cursor with spring physics, tactile film grain, and circular view-transition dark/light mode toggle.
+- **Curated Production Showcase:** Interactive gallery covering 15+ real repositories from the `pranataa-lab` workspace (FleetPulse, EchoMind, Clinic Queue, Cellar Door, Émeraude Botanica, Fleure Flower, CakeLuv, Eventix Theatre, and more) with category filters, modal architecture deep dives, and live GitHub repo links.
+- **9-Stage Engineering Standard:** Interactive lifecycle protocol visualizer based on the Workflow Master operating system.
+- **Touch Ergonomics & Accessibility:** Compliant with Apple HIG / Material Design 3 touch targets (>= 44x44px), thumb zone layout, `overflow-x: clip`, and reduced motion support.
 
 ---
 
-## 🚀 Local Setup & Preview
+## Technology Stack
 
-### 1. Repository Cloning
-```bash
-git clone https://github.com/pranataa-labs/Personal-Portfolio.git
-cd Personal-Portfolio
+- **Framework:** React 19 (with strict TypeScript)
+- **Bundler:** Vite 6
+- **Styling:** Tailwind CSS v4 (`@tailwindcss/vite`), tw-animate-css
+- **Components & UI:** shadcn-ui pattern (`/components/ui`), Radix UI Slot & Dialog, Lucide Icons
+- **Animation & Physics:** 21st DEV components (`ink-orbit-features`, `animated-hero`), Framer Motion 12, Lenis smooth scrolling
+- **Type Checking & Testing:** TypeScript 5.7, Vitest 3
+
+---
+
+## Project Structure
+
+```text
+portfolio-design/
+├── public/                     # Optimized WebP project captures and favicon
+│   ├── projects/               # High-resolution screenshots of actual repos
+│   ├── favicon.svg             # Monogram favicon
+│   └── pranataa.webp           # Optimized portrait asset
+├── src/
+│   ├── components/             # Page sections and features
+│   │   ├── ui/                 # 21st DEV & shadcn atomic components
+│   │   │   ├── animated-hero.tsx
+│   │   │   ├── button.tsx
+│   │   │   └── ink-orbit-features.tsx
+│   │   ├── about-section.tsx
+│   │   ├── contact-section.tsx
+│   │   ├── custom-cursor.tsx
+│   │   ├── hero.tsx
+│   │   ├── ink-orbit-section.tsx
+│   │   ├── motion.tsx
+│   │   ├── navbar.tsx
+│   │   ├── process-section.tsx
+│   │   ├── project-card.tsx
+│   │   ├── project-modal.tsx
+│   │   └── projects-section.tsx
+│   ├── data/
+│   │   └── projects.ts         # Verified project catalog metadata
+│   ├── hooks/
+│   │   ├── use-lenis.ts        # Smooth inertial scrolling
+│   │   └── use-theme.ts        # Circular view transition theme hook
+│   ├── lib/
+│   │   └── utils.ts            # ClassNames merger (clsx + tailwind-merge)
+│   ├── App.tsx
+│   ├── index.css               # OKLCH tokens and base layer
+│   └── main.tsx
+├── components.json             # shadcn project configuration
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
 ```
 
-### 2. Launch Local Server
-Open `index.html` directly in any web browser, or launch via Live Server:
+---
+
+## Local Setup & Development
+
+### 1. Install Dependencies
 ```bash
-# Using Python built-in HTTP server:
-python -m http.server 8080
+npm install
 ```
-Navigate to `http://localhost:8080` in your web browser.
+
+### 2. Run Local Development Server
+```bash
+npm run dev
+```
+Open `http://localhost:5173/` in your browser.
+
+### 3. Production Build & Preview
+```bash
+npm run build
+npm run preview
+```
 
 ---
 
-## 📄 License
+## Git Discipline & Co-Authorship
 
-This portfolio repository is open-sourced under the [MIT License](LICENSE).
+All commits follow Conventional Commits and include pairing co-authorship:
+```text
+Co-authored-by: aria sastra <192975116+ariasastra-dev@users.noreply.github.com>
+```
+
+---
+
+## License
+
+Open-sourced under the [MIT License](LICENSE).
