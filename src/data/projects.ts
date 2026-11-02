@@ -311,8 +311,8 @@ export const workflow = [
 
 export const contact = {
   email: "hello@ariasastra.com",
-  instagram: "https://instagram.com/aria.sastra",
-  instagramHandle: "@aria.sastra",
+  instagram: "https://www.instagram.com/pranata_yz/",
+  instagramHandle: "@pranata_yz",
   github: GH,
   githubPersonal: "https://github.com/ariasastra-dev",
   location: "Yogyakarta, Indonesia",
