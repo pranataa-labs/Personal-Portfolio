@@ -21,17 +21,17 @@ export function ProjectCard({ project, index, onSelect }: ProjectCardProps) {
     >
       <div>
         {/* Card Visual / Screenshot */}
-        <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-border bg-muted/30">
+        <div className="relative aspect-video w-full overflow-hidden border-b border-border bg-neutral-950/90 flex items-center justify-center p-2 sm:p-2.5">
           {project.image ? (
             <img
               src={project.image}
               alt={project.title}
               loading="lazy"
               decoding="async"
-              className="h-full w-full object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+              className="h-full w-full object-contain rounded-md shadow-xs grayscale group-hover:grayscale-0 group-hover:scale-[1.02] transition-all duration-500"
             />
           ) : (
-            <div className="h-full w-full flex flex-col items-center justify-center p-6 text-center bg-secondary/30">
+            <div className="h-full w-full flex flex-col items-center justify-center p-6 text-center bg-secondary/30 rounded-md">
               <span className="font-mono text-3xl font-extrabold tracking-widest text-foreground/40 group-hover:text-foreground/80 transition-colors">
                 {project.mark || "SYSTEM"}
               </span>
@@ -42,12 +42,12 @@ export function ProjectCard({ project, index, onSelect }: ProjectCardProps) {
           )}
 
           {/* Category & Year Floating Badges */}
-          <div className="absolute top-3 left-3 flex items-center gap-1.5">
+          <div className="absolute top-3 left-3 flex items-center gap-1.5 z-10">
             <span className="font-mono text-[10px] uppercase font-semibold px-2 py-0.5 rounded-sm bg-background/90 backdrop-blur-xs border border-border/80 text-foreground">
               {project.category}
             </span>
           </div>
-          <div className="absolute top-3 right-3">
+          <div className="absolute top-3 right-3 z-10">
             <span className="font-mono text-[10px] px-2 py-0.5 rounded-sm bg-background/90 backdrop-blur-xs border border-border/80 text-muted-foreground">
               {project.year}
             </span>

@@ -47,11 +47,11 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
 
           {/* Project Screenshot / Visual */}
           {project.image ? (
-            <div className="relative rounded-xl overflow-hidden border border-border bg-muted/40 aspect-[16/9]">
+            <div className="relative rounded-xl overflow-hidden border border-border bg-neutral-950/90 p-2 sm:p-3 aspect-[16/9] flex items-center justify-center">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-contain rounded-lg shadow-sm"
               />
             </div>
           ) : (
