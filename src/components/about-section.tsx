@@ -1,8 +1,18 @@
+import { useState } from "react"
 import { SectionLabel } from "@/components/motion"
-import { contact } from "@/data/projects"
-import { MapPin, Terminal, Award, BookOpen, ExternalLink } from "lucide-react"
+import { contact, certificates, type Certificate } from "@/data/projects"
+import { MapPin, Terminal, Award, BookOpen, ExternalLink, Maximize2, ShieldCheck } from "lucide-react"
+import { CertificateModal } from "@/components/certificate-modal"
 
 export function AboutSection() {
+  const [selectedCert, setSelectedCert] = useState<Certificate | null>(null)
+  const [modalOpen, setModalOpen] = useState(false)
+
+  const handleOpenCert = (cert: Certificate) => {
+    setSelectedCert(cert)
+    setModalOpen(true)
+  }
+
   return (
     <section id="about" className="py-20 md:py-28 border-b border-border bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,7 +34,7 @@ export function AboutSection() {
             </p>
 
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-              Alongside web engineering, I conduct active research in Machine Learning and audio intelligence. Recent initiatives include <span className="text-foreground">EchoMind</span> (low-latency meeting transcription on CPU via faster-whisper paired with Gemini reasoning) and digital image steganography with AES-256-GCM authenticated encryption.
+              Alongside web engineering, I conduct active research in applied Machine Learning, quantitative modeling, and audio intelligence. Recent initiatives include <span className="text-foreground">Indonesia Mutual Fund Analytics</span> and <span className="text-foreground">EchoMind</span>, backed by formal certifications in Python data analysis and statistical modeling.
             </p>
 
             <div className="pt-4 flex flex-wrap gap-4 font-mono text-xs text-muted-foreground">
@@ -84,6 +94,81 @@ export function AboutSection() {
               </ul>
             </div>
 
+            {/* Verified Certifications Card */}
+            {certificates && certificates.length > 0 && (
+              <div className="border border-border bg-card rounded-xl p-6 shadow-xs group">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground flex items-center gap-1.5">
+                    <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> VERIFIED CERTIFICATIONS
+                  </span>
+                  <span className="font-mono text-[10px] uppercase text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded font-medium">
+                    IBM Network
+                  </span>
+                </div>
+
+                {certificates.map((cert) => (
+                  <div key={cert.id} className="space-y-3">
+                    {/* Interactive Certificate Thumbnail */}
+                    <div
+                      onClick={() => handleOpenCert(cert)}
+                      className="relative aspect-16/10 rounded-lg overflow-hidden border border-border/80 bg-neutral-950/80 cursor-pointer group/thumb"
+                    >
+                      <img
+                        src={cert.image}
+                        alt={cert.title}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover/thumb:scale-105 opacity-90 group-hover/thumb:opacity-100"
+                      />
+                      <div className="absolute inset-0 bg-background/60 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center gap-1.5 text-xs font-mono font-medium text-foreground backdrop-blur-xs">
+                        <Maximize2 className="w-3.5 h-3.5" /> Expand Certificate
+                      </div>
+                    </div>
+
+                    <div>
+                      <div className="flex items-baseline justify-between gap-2">
+                        <h3 className="font-display font-bold text-sm text-foreground">
+                          {cert.title}
+                        </h3>
+                        <span className="font-mono text-[11px] text-muted-foreground shrink-0">
+                          {cert.issueDate.split(",")[1]?.trim() || cert.issueDate}
+                        </span>
+                      </div>
+                      <p className="text-xs text-muted-foreground mt-0.5">
+                        {cert.issuer} · {cert.organization}
+                      </p>
+
+                      <div className="flex flex-wrap gap-1.5 mt-2.5">
+                        {cert.skills.slice(0, 4).map((s) => (
+                          <span
+                            key={s}
+                            className="font-mono text-[10px] bg-secondary/70 border border-border/60 px-2 py-0.5 rounded text-foreground/85 font-medium"
+                          >
+                            {s}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="pt-2 flex items-center justify-between border-t border-border/60 text-xs">
+                      <button
+                        onClick={() => handleOpenCert(cert)}
+                        className="font-mono text-xs text-foreground font-medium hover:underline inline-flex items-center gap-1 cursor-pointer"
+                      >
+                        Preview Certificate
+                      </button>
+                      <a
+                        href={cert.verificationUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="font-mono text-xs text-muted-foreground hover:text-foreground inline-flex items-center gap-1 transition-colors"
+                      >
+                        Verify Credential <ExternalLink className="w-3 h-3" />
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
             {/* Guiding Principles */}
             <div className="border border-border bg-secondary/20 rounded-xl p-6">
               <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground block mb-3 flex items-center gap-1.5">
@@ -104,6 +189,13 @@ export function AboutSection() {
           </div>
         </div>
       </div>
+
+      {/* Certificate Lightbox Modal */}
+      <CertificateModal
+        certificate={selectedCert}
+        open={modalOpen}
+        onOpenChange={setModalOpen}
+      />
     </section>
   )
 }

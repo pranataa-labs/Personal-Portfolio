@@ -367,3 +367,41 @@ export const contact = {
   coords: "7.7956° S, 110.3695° E",
 }
 
+
+export type Certificate = {
+  id: string
+  title: string
+  courseCode: string
+  issuer: string
+  organization: string
+  issueDate: string
+  verificationUrl: string
+  image: string
+  imagePng: string
+  skills: string[]
+  description: string
+  highlights: string[]
+}
+
+export const certificates: Certificate[] = [
+  {
+    id: "ibm-da0101en",
+    title: "Data Analysis with Python",
+    courseCode: "DA0101EN",
+    issuer: "Cognitive Class",
+    organization: "Powered by IBM Developer Skills Network",
+    issueDate: "December 17, 2024",
+    verificationUrl: "https://courses.cognitiveclass.ai/certificates/7b6659f456ca4e94b877d13de70161e5",
+    image: "./certificates/ibm-data-analysis-python.webp",
+    imagePng: "./certificates/ibm-data-analysis-python.png",
+    skills: ["Python", "Pandas", "NumPy", "Data Wrangling", "EDA", "Scikit-learn"],
+    description:
+      "Official certificate of completion and passing grade in Data Analysis with Python (DA0101EN), provided by IBM via Cognitive Class. Validates practical capabilities in exploratory data analysis, regression modeling, and machine learning pipelines.",
+    highlights: [
+      "Data wrangling: handling missing values, data formatting, normalization and binning with Pandas",
+      "Exploratory Data Analysis (EDA): descriptive statistics, groupby, ANOVA, correlation and heatmaps",
+      "Model development: Simple & Multiple Linear Regression, Polynomial Regression, and Pipelines",
+      "Model evaluation: Mean Squared Error (MSE), R² metrics, overfitting diagnosis, and Ridge Regression",
+    ],
+  },
+]
