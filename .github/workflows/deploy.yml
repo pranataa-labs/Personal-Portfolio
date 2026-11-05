@@ -16,6 +16,7 @@ concurrency:
 
 jobs:
   build-and-deploy:
+    if: "!github.event.repository.private"
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
