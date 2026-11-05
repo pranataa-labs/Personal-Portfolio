@@ -58,7 +58,7 @@ export function ProjectCard({ project, index, onSelect }: ProjectCardProps) {
         <div className="p-5 sm:p-6">
           <div className="flex items-start justify-between gap-3">
             <div>
-              <h3 className="font-display text-xl font-bold tracking-tight text-foreground group-hover:underline underline-offset-4 flex items-center gap-1.5">
+              <h3 className="font-display text-xl font-bold tracking-tight text-foreground group-hover:underline underline-offset-4 flex items-center gap-1.5 break-words">
                 <span>{project.title}</span>
                 <ArrowUpRight className="w-4 h-4 opacity-0 -translate-x-1 translate-y-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 transition-all text-foreground" />
               </h3>

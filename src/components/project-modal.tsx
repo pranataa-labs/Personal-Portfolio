@@ -27,7 +27,7 @@ export function ProjectModal({ project, open, onOpenChange }: ProjectModalProps)
                   <Calendar className="w-3 h-3" /> {project.year}
                 </span>
               </div>
-              <Dialog.Title className="text-2xl sm:text-3xl font-display font-bold text-foreground">
+              <Dialog.Title className="text-2xl sm:text-3xl font-display font-bold text-foreground break-words">
                 {project.title}
               </Dialog.Title>
               <Dialog.Description className="text-sm text-muted-foreground mt-1">

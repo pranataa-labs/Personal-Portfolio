@@ -30,11 +30,11 @@ export function AboutSection() {
             </p>
 
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-              My core stack centers on Laravel, React 19, TypeScript, and modern Tailwind CSS. I have developed multi-tenant SaaS tracking portals (<span className="text-foreground">FleetPulse</span>), audio polyclinic calling systems (<span className="text-foreground">Clinic Queue</span>), and boutique commercial platforms with automated Midtrans payment gateways.
+              My core stack centers on Laravel, React 19, TypeScript, and modern Tailwind CSS. I have developed multi-tenant SaaS tracking portals (<span className="text-foreground">FleetPulse</span>), audio polyclinic calling systems (<span className="text-foreground">Clinic-Queue-Management-System</span>), and boutique commercial platforms with automated Midtrans payment gateways.
             </p>
 
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-              Alongside web engineering, I conduct active research in applied Machine Learning, quantitative modeling, and audio intelligence. Recent initiatives include <span className="text-foreground">Indonesia Mutual Fund Analytics</span> and <span className="text-foreground">EchoMind</span>, backed by formal certifications in Python data analysis and statistical modeling.
+              Alongside web engineering, I conduct active research in applied Machine Learning, quantitative modeling, and audio intelligence. Recent initiatives include <span className="text-foreground">Indonesia-Mutual-Fund-Analytics</span> and <span className="text-foreground">EchoMind-Audio-Intelligence</span>, backed by formal certifications in Python data analysis and statistical modeling.
             </p>
 
             <div className="pt-4 flex flex-wrap gap-4 font-mono text-xs text-muted-foreground">

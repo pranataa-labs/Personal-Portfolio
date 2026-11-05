@@ -19,7 +19,6 @@ export type Project = {
 const GH = "https://github.com/pranataa-labs"
 
 export const projects: Project[] = [
-
   {
     slug: "fleetpulse",
     title: "FleetPulse",
@@ -40,37 +39,37 @@ export const projects: Project[] = [
   },
 
   {
-    slug: "echomind",
-    title: "EchoMind",
-    tagline: "Meeting and audio intelligence platform",
+    slug: "echomind-audio-intelligence",
+    title: "EchoMind-Audio-Intelligence",
+    tagline: "Meeting and audio intelligence platform with CPU STT & Gemini reasoning",
     category: "ML & Data",
     year: "2026",
     stack: ["Python", "faster-whisper", "Gemini 2.5 Flash", "Streamlit"],
     summary:
-      "Turns meeting recordings into transcripts, summaries and action items. Speech-to-text runs on CPU with faster-whisper int8, and Gemini handles the reasoning, with an offline heuristic mode when there is no API key.",
+      "Turns meeting recordings into transcripts, summaries and action items. Speech-to-text runs on CPU with faster-whisper int8, and Gemini handles reasoning, with an offline heuristic fallback mode when there is no API key.",
     highlights: [
       "Speaker turns with second-level timestamps",
       "Action items with owner, deadline and urgency",
       "Ask-your-meeting Q&A that cites timestamps",
-      "Sentiment timeline for how the conversation went",
+      "Sentiment timeline for conversation trajectory",
     ],
     image: "./projects/echomind.webp",
     repo: `${GH}/EchoMind-Audio-Intelligence`,
   },
 
   {
-    slug: "clinic-queue",
-    title: "Clinic Queue",
-    tagline: "Polyclinic queue calling with audio and a TV display",
+    slug: "clinic-queue-management-system",
+    title: "Clinic-Queue-Management-System",
+    tagline: "Polyclinic queue calling with audio synthesis and real-time TV display",
     category: "Web App",
     year: "2026",
     stack: ["Laravel", "Real-time", "Web Speech", "Tailwind CSS"],
     summary:
-      "A queue system for polyclinics. Doctors call the next patient from a console, the waiting-room TV updates instantly and a voice announcement reads the number aloud.",
+      "An integrated queue platform for polyclinics. Doctors call the next patient from an isolated examination console, waiting-room TV displays update instantly, and an audio engine announces ticket numbers aloud.",
     highlights: [
       "Doctor console for calling, recalling and skipping patients",
-      "Full-screen TV display built for a waiting room",
-      "Audio announcements for every call",
+      "Full-screen TV display optimized for healthcare waiting areas",
+      "Indonesian voice synthesis and WebRTC live intercom engine",
     ],
     image: "./projects/clinic-queue.webp",
     gallery: ["./projects/clinic-queue.webp", "./projects/clinic-console.webp"],
@@ -78,54 +77,73 @@ export const projects: Project[] = [
   },
 
   {
-    slug: "cellar-door",
-    title: "Cellar Door",
-    tagline: "Bookstore and small press with a two-sided app",
+    slug: "village-information-system",
+    title: "Village-Information-System",
+    tagline: "Modern village administration and public citizen e-service portal",
+    category: "Web App",
+    year: "2026",
+    stack: ["Next.js 16", "TypeScript", "Tailwind CSS v4", "Prisma ORM", "MySQL"],
+    summary:
+      "A village e-service portal (SID) connecting citizens with municipal administration. Citizens request official permits online, track submission status in real time, and inspect village budget infographics.",
+    highlights: [
+      "Self-service citizen letter applications with NIK autofill",
+      "Real-time ticket tracking from validation to approved status",
+      "Municipal budget transparency ledger and demographic charts with Recharts",
+      "Staff administration backoffice with document verification desk",
+    ],
+    image: "./projects/village.webp",
+    repo: `${GH}/Village-Information-System`,
+  },
+
+  {
+    slug: "cellar-door-bookstore",
+    title: "Cellar-Door-Bookstore",
+    tagline: "Dual-sided independent bookstore and press application",
     category: "Web App",
     year: "2026",
     stack: ["React 19", "Vite 6", "Tailwind CSS v4", "TypeScript", "Vitest"],
     summary:
-      "A bookstore with a public storefront and an admin backoffice in one React app. Checkout fills in the address from a postal code to cut down on typing.",
+      "A bookstore with a public storefront and an admin backoffice in one React app. Checkout auto-resolves addresses from postal codes to cut down on typing friction.",
     highlights: [
-      "Storefront catalog with filters and a member-only cart",
-      "Admin backoffice for titles, stock and orders",
-      "Postal-code autofill at checkout",
+      "Storefront catalog with multi-facet filters and member cart",
+      "Admin backoffice for titles, inventory replenishment and orders",
+      "Postal-code autofill at checkout with strict validation",
     ],
     image: "./projects/cellar-door.webp",
-    repo: `${GH}/cellar-door-bookstore`,
+    repo: `${GH}/Cellar-Door-Bookstore`,
   },
 
   {
-    slug: "emeraude",
-    title: "Émeraude Botanica",
-    tagline: "Luxury skincare boutique and maison backoffice",
+    slug: "emeraude-botanica",
+    title: "Emeraude-Botanica",
+    tagline: "Luxury skincare boutique and maison backoffice e-commerce",
     category: "Web App",
     year: "2026",
     stack: ["React 19", "TypeScript", "Vite 6", "Tailwind CSS v4", "Vitest"],
     summary:
-      "An e-commerce boutique for botanical skincare. State-driven routing keeps page changes instant, and strict types cover every product, cart and order model.",
+      "An e-commerce boutique for botanical skincare. State-driven routing keeps page transitions instant, and strict TypeScript types cover every product formula, cart and order entity.",
     highlights: [
-      "Product formulas and flacon variants modelled end to end",
-      "Unit tests for catalog integrity and order totals",
-      "Separate maison admin for the catalog and orders",
+      "Product formulas and flacon variants modelled end-to-end",
+      "Unit test suite verifying catalog integrity and order totals",
+      "Protected maison admin backoffice for catalog and fulfillment",
     ],
     image: "./projects/emeraude.webp",
     repo: `${GH}/Emeraude-Botanica`,
   },
 
   {
-    slug: "fleure",
-    title: "Fleure Flower",
-    tagline: "Boutique florist store with a full admin suite",
+    slug: "fleure-flower",
+    title: "Fleure-Flower",
+    tagline: "Boutique florist store with an obfuscated admin suite",
     category: "Web App",
     year: "2026",
     stack: ["Laravel 13", "Tailwind CSS v4", "MySQL", "Blade"],
     summary:
       "A florist shop for bouquets, arrangements and greeting cards. The admin side follows the shadcn-admin look with light, dark and system themes.",
     highlights: [
-      "Catalog for bouquets, fresh arrangements and cards",
-      "Admin portal behind an obfuscated route",
-      "Light, dark and system theme support",
+      "Catalog for bouquets, fresh arrangements and custom greeting cards",
+      "Admin portal secured behind an obfuscated route",
+      "Light, dark and system theme support with OKLCH tokens",
     ],
     image: "./projects/fleure.webp",
     gallery: ["./projects/fleure.webp", "./projects/fleure-admin.webp"],
@@ -133,18 +151,18 @@ export const projects: Project[] = [
   },
 
   {
-    slug: "cakeluv",
-    title: "CakeLuv",
-    tagline: "Patisserie e-commerce with Midtrans checkout",
+    slug: "cake-luv",
+    title: "Cake-Luv",
+    tagline: "Patisserie e-commerce with Midtrans Snap checkout & Google OAuth",
     category: "Web App",
     year: "2026",
     stack: ["Laravel 13", "Tailwind CSS v4", "Midtrans Snap", "Google OAuth"],
     summary:
-      "An online store for an artisan bakery. Customers sign in with Google and pay through Midtrans Snap, and the owner watches 12 months of revenue in the dashboard.",
+      "An online store for an artisan bakery. Customers sign in with Google and pay through Midtrans Snap, while the owner monitors revenue trends and live orders in the dashboard.",
     highlights: [
-      "Midtrans Snap payments with automatic order updates",
-      "Google OAuth sign-in",
-      "Revenue analytics and live order tracking",
+      "Midtrans Snap payment gateway with automated status webhooks",
+      "Google OAuth 2.0 social sign-in integration",
+      "Revenue analytics with monthly breakdown and live order tracking",
     ],
     image: "./projects/cakeluv.webp",
     gallery: ["./projects/cakeluv.webp", "./projects/cakeluv-admin.webp"],
@@ -152,62 +170,62 @@ export const projects: Project[] = [
   },
 
   {
-    slug: "eventix",
-    title: "Eventix Theatre",
-    tagline: "Event management and ticketing",
+    slug: "eventix-theatre",
+    title: "Eventix-Theatre",
+    tagline: "Event management and ticket booking with PDF QR codes",
     category: "Web App",
     year: "2026",
     stack: ["Laravel 13", "FilamentPHP", "Midtrans", "MySQL"],
     summary:
-      "Organizers create events, set ticket quotas and take payments through Midtrans. Every change lands in an audit log.",
+      "Organizers create events, configure ticket quotas and process payments through Midtrans. Every operational change is captured in a tamper-evident audit log.",
     highlights: [
-      "Dynamic ticket quotas per event",
-      "Midtrans payment gateway",
-      "Audit log for every admin action",
+      "Dynamic ticket quotas and pricing tiers per event",
+      "Midtrans payment gateway integration with instant receipt",
+      "Audit log for administrative and ticketing actions",
     ],
     image: "./projects/eventix.webp",
-    repo: "https://github.com/PranataGM/Eventix-THEATRE",
+    repo: `${GH}/Eventix-Theatre`,
   },
 
   {
-    slug: "inventory",
-    title: "Inventory System",
-    tagline: "Multi-warehouse stock control",
+    slug: "inventory-management-system",
+    title: "Inventory-Management-System",
+    tagline: "Multi-warehouse stock control, QR scanning & forecasting",
     category: "SaaS",
     year: "2026",
     stack: ["Laravel 13", "Filament v3", "Tailwind CSS v4", "MySQL"],
     summary:
-      "Tracks stock movement across warehouses, handles vendor returns and forecasts turnover. The interface uses the shadcn-admin design system on top of Filament.",
+      "Tracks inventory movement across multiple warehouses, handles vendor returns, and forecasts turnover. The UI leverages the shadcn-admin design system on Filament.",
     highlights: [
-      "Stock movements and availability audits",
-      "Vendor return processing",
-      "Inventory turnover forecasting",
+      "Stock movements, transfer receipts and availability audits",
+      "Vendor return processing and supplier tracking",
+      "Inventory turnover forecasting with visual analytics",
     ],
     image: "./projects/inventory.webp",
     repo: `${GH}/Inventory-Management-System`,
   },
 
   {
-    slug: "simasjid",
-    title: "SIMasjid",
-    tagline: "Mosque management information system",
+    slug: "mosque-management-system",
+    title: "Mosque-Management-System",
+    tagline: "Mosque community agenda and transparent financial information system",
     category: "Web App",
     year: "2025",
     stack: ["Laravel 12", "Tailwind CSS", "MySQL"],
     summary:
-      "Helps a mosque committee announce lectures and events and publish its cash flow so the congregation can see where donations go.",
+      "Enables mosque committees to publish community lectures, prayer schedules and transparent financial cash flow reports so congregants can track donations.",
     highlights: [
-      "Lecture and community agenda publishing",
-      "Transparent cash-flow reports",
-      "Admin tools for the committee",
+      "Lecture, prayer timetable and community agenda publishing",
+      "Transparent financial cash flow ledgers with visual breakdown",
+      "Committee admin workspace for donations and announcements",
     ],
     image: "./projects/simasjid.webp",
     repo: `${GH}/Mosque-Management-System`,
   },
 
   {
-    slug: "mutual-fund-analytics",
-    title: "Indonesia Mutual Fund Analytics",
+    slug: "indonesia-mutual-fund-analytics",
+    title: "Indonesia-Mutual-Fund-Analytics",
     tagline: "Quantitative analytics & multi-criteria scoring for 146 mutual funds",
     category: "ML & Data",
     year: "2026",
@@ -226,69 +244,148 @@ export const projects: Project[] = [
   },
 
   {
-    slug: "stego",
-    title: "Stego WhatsApp",
-    tagline: "AES-256-GCM + LSB steganography research",
+    slug: "steganografi-encryption",
+    title: "Steganografi-Encryption",
+    tagline: "AES-256-GCM + LSB digital steganography and WhatsApp transmission study",
     category: "ML & Data",
     year: "2026",
     stack: ["Python", "Cryptography", "Pillow", "Jupyter"],
     summary:
-      "Encrypts a message with AES-256-GCM, hides it in the least significant bits of a PNG, then measures what WhatsApp compression does to it.",
+      "Encrypts sensitive payloads with authenticated AES-256-GCM, hides them in PNG least significant bits (LSB), and measures compression impacts across WhatsApp document vs photo channels.",
     highlights: [
-      "PSNR above 79 dB and SSIM above 0.9999",
-      "Bit error rate above 40% even at JPEG quality 95",
-      "Residual maps amplified 30× to show where pixels changed",
+      "Peak signal-to-noise ratio (PSNR) above 79 dB and SSIM above 0.9999",
+      "Empirical bit error rate measurement under lossy JPEG compression",
+      "Residual difference maps amplified 30x to visualize pixel mutations",
     ],
     image: "./projects/stego.webp",
-    repo: `${GH}/Steganografi-Whatsapp`,
+    repo: `${GH}/Steganografi-Encryption`,
   },
 
   {
-    slug: "the-boss",
-    title: "The Boss Lounge",
-    tagline: "Hookah lounge site with a Turkish admin panel",
+    slug: "the-boss-izmir",
+    title: "The-Boss-Izmir",
+    tagline: "Cafe and lounge web application with Turkish administrative panel",
     category: "Web App",
     year: "2025",
     stack: ["Laravel", "Filament", "Tailwind CSS"],
     summary:
-      "A dark, menu-first site for a lounge in Bornova, Izmir. Staff update the menu, gallery and contact details from a fully Turkish admin panel.",
-    highlights: ["Categorized menu with prices", "Gallery grid in 4:5", "Settings editable without a developer"],
+      "A dark-themed, menu-first web platform for a premier lounge in Bornova, Izmir. Staff update dynamic menus, food categories, photo galleries and contact channels from a fully Turkish admin panel.",
+    highlights: [
+      "Categorized dining and beverage menu with live pricing",
+      "High-resolution 4:5 visual gallery grid",
+      "Content and branding settings manageable without code modification",
+    ],
     image: "./projects/the-boss.webp",
     repo: `${GH}/The-Boss-Izmir`,
   },
 
   {
     slug: "workflow-master",
-    title: "Workflow Master",
-    tagline: "Engineering rules for AI coding assistants",
+    title: "Workflow-Master",
+    tagline: "Software engineering operating system and AI assistant governance",
     category: "Tooling",
     year: "2026",
     stack: ["AGENTS.md", "commitlint", "husky", "git-cliff", "PowerShell"],
     summary:
-      "The rulebook behind every project here: a 9-stage workflow, 19 rule sets, commit tooling and a one-command installer for AGENTS.md.",
+      "The engineering governance engine behind all repositories: 9-stage disciplined workflow, 20 engineering rules, 16 agent skills, commit linter tooling and automated AGENTS.md installers.",
     highlights: [
-      "9-stage workflow from triage to report",
-      "Conventional Commits with commitlint and git-cliff changelogs",
-      "Anti-slop UI and mobile ergonomics rules",
+      "9-stage engineering workflow from Triage to Reporting",
+      "16 specialized agent skills (ML, Data Analysis, Stats, Distinctive UI, Security)",
+      "Strict Conventional Commits enforcement and Rule 12.1 pairing co-authorship",
     ],
     image: "./projects/workflow-master.webp",
     repo: `${GH}/Workflow-Master`,
   },
 
   {
-    slug: "data-labs",
-    title: "Data Labs",
-    tagline: "NumPy, Pandas and OpenCV masterclasses",
+    slug: "numpy-lab",
+    title: "NumPy-Lab",
+    tagline: "Interactive array computing, numerical operations and linear algebra",
     category: "ML & Data",
     year: "2026",
-    stack: ["NumPy", "Pandas", "OpenCV", "Jupyter", "Colab"],
+    stack: ["NumPy", "Python", "Jupyter", "Colab"],
     summary:
-      "Three notebook courses, 75 topics each for NumPy and Pandas plus a computer-vision playground, runnable in Colab with one click.",
-    highlights: ["75-topic NumPy notebook", "75-topic Pandas notebook", "OpenCV playground"],
+      "Interactive Jupyter notebooks and exercises for mastering NumPy array computing, numerical operations, vectorization, and linear algebra recipes.",
+    highlights: [
+      "75-topic NumPy notebook masterclass",
+      "Vectorized mathematical operations and broadcasting benchmarks",
+      "Colab ready with 1-click cloud execution",
+    ],
     image: "./projects/data-labs.webp",
     repo: `${GH}/NumPy-Lab`,
   },
 
+  {
+    slug: "pandas-lab",
+    title: "Pandas-Lab",
+    tagline: "Data wrangling, cleaning, aggregation and transformation recipes",
+    category: "ML & Data",
+    year: "2026",
+    stack: ["Pandas", "Python", "Data Wrangling", "Jupyter"],
+    summary:
+      "Practical playground for exploring Pandas: data wrangling, missing value imputation, multi-index aggregation, pivot transformation, and real-world data analysis recipes.",
+    highlights: [
+      "75-topic Pandas data wrangling masterclass",
+      "Multi-index and groupby aggregation recipes",
+      "Real-world dataset exploratory workflows",
+    ],
+    repo: `${GH}/Pandas-Lab`,
+    mark: "PANDAS",
+  },
+
+  {
+    slug: "opencv-lab",
+    title: "OpenCV-Lab",
+    tagline: "Computer vision playground, contour analysis & video processing",
+    category: "ML & Data",
+    year: "2026",
+    stack: ["OpenCV", "Python", "Computer Vision", "Pillow"],
+    summary:
+      "Interactive computer vision playground exploring OpenCV: image processing, contour analysis, spatial filtering, object detection, and video manipulation recipes.",
+    highlights: [
+      "Morphological operations and contour detection",
+      "Spatial filtering and color-space conversions",
+      "Object tracking and video manipulation recipes",
+    ],
+    repo: `${GH}/OpenCV-Lab`,
+    mark: "OPENCV",
+  },
+
+  {
+    slug: "ohio-caffe-table-menu",
+    title: "Ohio-Caffe-Table-Menu",
+    tagline: "Real-time QR table menu & cashier POS with pay-on-delivery flow",
+    category: "Web App",
+    year: "2026",
+    stack: ["Laravel 13", "React 19", "Tailwind CSS v4", "MySQL", "QR Menu"],
+    summary:
+      "Real-time QR table ordering and cashier POS system designed for dine-in cafes with pay-on-delivery at the table, instant kitchen tickets, and live sales reporting.",
+    highlights: [
+      "Dynamic table QR code generator for direct mobile ordering",
+      "Instant kitchen order dispatching and ticket lifecycle",
+      "Cashier POS desk with pay-on-delivery flow",
+    ],
+    repo: `${GH}/Ohio-Caffe-Table-Menu`,
+    mark: "OHIO",
+  },
+
+  {
+    slug: "monopoli-negeri-konoha",
+    title: "Monopoli-Negeri-Konoha",
+    tagline: "Indonesian political-economic satire board game on local Wi-Fi",
+    category: "Web App",
+    year: "2026",
+    stack: ["TypeScript", "WebSockets", "React 19", "Tailwind CSS"],
+    summary:
+      "15x15 board game satirizing Indonesian economic and political affairs with multi-device local Wi-Fi synchronization, live asset trading, and bankruptcy dynamics.",
+    highlights: [
+      "15x15 custom board tile mechanics and property ownership",
+      "Multi-device real-time state synchronization over local Wi-Fi",
+      "Satirical economic and political event cards",
+    ],
+    repo: `${GH}/Monopoli-Negeri-Konoha`,
+    mark: "KONOHA",
+  },
 ]
 
 export const categories = ["All", "Web App", "SaaS", "ML & Data", "Tooling"] as const
@@ -296,65 +393,36 @@ export const categories = ["All", "Web App", "SaaS", "ML & Data", "Tooling"] as 
 export type CategoryFilter = (typeof categories)[number]
 
 export const stack = [
-
   "Laravel",
-
   "React 19",
-
   "Next.js 16",
-
   "TypeScript",
-
   "Tailwind CSS v4",
-
   "Filament",
-
   "MySQL",
-
   "Prisma",
-
   "Laravel Reverb",
-
   "Midtrans",
-
   "Python",
-
   "Pandas",
-
   "NumPy",
-
   "OpenCV",
-
   "faster-whisper",
-
   "Gemini API",
-
   "Streamlit",
-
   "Vite",
-
 ]
 
 export const workflow = [
-
   { title: "Triage", body: "Name the goal, the task type and the risk before touching code." },
-
   { title: "Discover", body: "Read the manifests, schema and contracts that the change will touch." },
-
   { title: "Design", body: "Write acceptance criteria, data flow and how errors should fail." },
-
   { title: "Plan", body: "Pick the smallest set of files and the order to change them." },
-
   { title: "Implement", body: "Type-safe code that follows the conventions already in the repo." },
-
   { title: "Verify", body: "Run the tests, linter and type checker, and keep the output." },
-
   { title: "Review", body: "Read the diff for auth gaps, leaked keys and personal data." },
-
   { title: "Release", body: "Check that the build is healthy before it ships." },
-
   { title: "Report", body: "Say what changed and what was verified, plainly." },
-
 ]
 
 export const contact = {
@@ -366,7 +434,6 @@ export const contact = {
   location: "Yogyakarta, Indonesia",
   coords: "7.7956° S, 110.3695° E",
 }
-
 
 export type Certificate = {
   id: string
