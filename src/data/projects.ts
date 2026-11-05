@@ -39,27 +39,8 @@ export const projects: Project[] = [
   },
 
   {
-    slug: "echomind-audio-intelligence",
-    title: "EchoMind-Audio-Intelligence",
-    tagline: "Meeting and audio intelligence platform with CPU STT & Gemini reasoning",
-    category: "ML & Data",
-    year: "2026",
-    stack: ["Python", "faster-whisper", "Gemini 2.5 Flash", "Streamlit"],
-    summary:
-      "Turns meeting recordings into transcripts, summaries and action items. Speech-to-text runs on CPU with faster-whisper int8, and Gemini handles reasoning, with an offline heuristic fallback mode when there is no API key.",
-    highlights: [
-      "Speaker turns with second-level timestamps",
-      "Action items with owner, deadline and urgency",
-      "Ask-your-meeting Q&A that cites timestamps",
-      "Sentiment timeline for conversation trajectory",
-    ],
-    image: "./projects/echomind.webp",
-    repo: `${GH}/EchoMind-Audio-Intelligence`,
-  },
-
-  {
     slug: "clinic-queue-management-system",
-    title: "Clinic-Queue-Management-System",
+    title: "Clinic Queue Management System",
     tagline: "Polyclinic queue calling with audio synthesis and real-time TV display",
     category: "Web App",
     year: "2026",
@@ -78,7 +59,7 @@ export const projects: Project[] = [
 
   {
     slug: "village-information-system",
-    title: "Village-Information-System",
+    title: "Village Information System",
     tagline: "Modern village administration and public citizen e-service portal",
     category: "Web App",
     year: "2026",
@@ -96,8 +77,27 @@ export const projects: Project[] = [
   },
 
   {
+    slug: "ohio-caffe-table-menu",
+    title: "Ohio Caffe Table Menu",
+    tagline: "Real-time QR table menu & cashier POS with pay-on-delivery flow",
+    category: "Web App",
+    year: "2026",
+    stack: ["Laravel 13", "React 19", "Tailwind CSS v4", "MySQL", "QR Menu"],
+    summary:
+      "Real-time QR table ordering and cashier POS system designed for dine-in cafes with pay-on-delivery at the table, instant kitchen tickets, and live sales reporting.",
+    highlights: [
+      "Dynamic table QR code generator for direct mobile ordering",
+      "Instant kitchen order dispatching and ticket lifecycle",
+      "Cashier POS desk with pay-on-delivery flow",
+    ],
+    image: "./projects/ohio.webp",
+    gallery: ["./projects/ohio.webp", "./projects/ohio-pos.webp"],
+    repo: `${GH}/Ohio-Caffe-Table-Menu`,
+  },
+
+  {
     slug: "cellar-door-bookstore",
-    title: "Cellar-Door-Bookstore",
+    title: "Cellar Door Bookstore",
     tagline: "Dual-sided independent bookstore and press application",
     category: "Web App",
     year: "2026",
@@ -115,7 +115,7 @@ export const projects: Project[] = [
 
   {
     slug: "emeraude-botanica",
-    title: "Emeraude-Botanica",
+    title: "Emeraude Botanica",
     tagline: "Luxury skincare boutique and maison backoffice e-commerce",
     category: "Web App",
     year: "2026",
@@ -133,7 +133,7 @@ export const projects: Project[] = [
 
   {
     slug: "fleure-flower",
-    title: "Fleure-Flower",
+    title: "Fleure Flower",
     tagline: "Boutique florist store with an obfuscated admin suite",
     category: "Web App",
     year: "2026",
@@ -152,7 +152,7 @@ export const projects: Project[] = [
 
   {
     slug: "cake-luv",
-    title: "Cake-Luv",
+    title: "Cake Luv",
     tagline: "Patisserie e-commerce with Midtrans Snap checkout & Google OAuth",
     category: "Web App",
     year: "2026",
@@ -171,7 +171,7 @@ export const projects: Project[] = [
 
   {
     slug: "eventix-theatre",
-    title: "Eventix-Theatre",
+    title: "Eventix Theatre",
     tagline: "Event management and ticket booking with PDF QR codes",
     category: "Web App",
     year: "2026",
@@ -189,7 +189,7 @@ export const projects: Project[] = [
 
   {
     slug: "inventory-management-system",
-    title: "Inventory-Management-System",
+    title: "Inventory Management System",
     tagline: "Multi-warehouse stock control, QR scanning & forecasting",
     category: "SaaS",
     year: "2026",
@@ -207,7 +207,7 @@ export const projects: Project[] = [
 
   {
     slug: "mosque-management-system",
-    title: "Mosque-Management-System",
+    title: "Mosque Management System",
     tagline: "Mosque community agenda and transparent financial information system",
     category: "Web App",
     year: "2025",
@@ -224,8 +224,26 @@ export const projects: Project[] = [
   },
 
   {
+    slug: "the-boss-izmir",
+    title: "The Boss Izmir",
+    tagline: "Cafe and lounge web application with Turkish administrative panel",
+    category: "Web App",
+    year: "2025",
+    stack: ["Laravel", "Filament", "Tailwind CSS"],
+    summary:
+      "A dark-themed, menu-first web platform for a premier lounge in Bornova, Izmir. Staff update dynamic menus, food categories, photo galleries and contact channels from a fully Turkish admin panel.",
+    highlights: [
+      "Categorized dining and beverage menu with live pricing",
+      "High-resolution 4:5 visual gallery grid",
+      "Content and branding settings manageable without code modification",
+    ],
+    image: "./projects/the-boss.webp",
+    repo: `${GH}/The-Boss-Izmir`,
+  },
+
+  {
     slug: "indonesia-mutual-fund-analytics",
-    title: "Indonesia-Mutual-Fund-Analytics",
+    title: "Indonesia Mutual Fund Analytics",
     tagline: "Quantitative analytics & multi-criteria scoring for 146 mutual funds",
     category: "ML & Data",
     year: "2026",
@@ -245,7 +263,7 @@ export const projects: Project[] = [
 
   {
     slug: "steganografi-encryption",
-    title: "Steganografi-Encryption",
+    title: "Steganografi Encryption",
     tagline: "AES-256-GCM + LSB digital steganography and WhatsApp transmission study",
     category: "ML & Data",
     year: "2026",
@@ -262,26 +280,8 @@ export const projects: Project[] = [
   },
 
   {
-    slug: "the-boss-izmir",
-    title: "The-Boss-Izmir",
-    tagline: "Cafe and lounge web application with Turkish administrative panel",
-    category: "Web App",
-    year: "2025",
-    stack: ["Laravel", "Filament", "Tailwind CSS"],
-    summary:
-      "A dark-themed, menu-first web platform for a premier lounge in Bornova, Izmir. Staff update dynamic menus, food categories, photo galleries and contact channels from a fully Turkish admin panel.",
-    highlights: [
-      "Categorized dining and beverage menu with live pricing",
-      "High-resolution 4:5 visual gallery grid",
-      "Content and branding settings manageable without code modification",
-    ],
-    image: "./projects/the-boss.webp",
-    repo: `${GH}/The-Boss-Izmir`,
-  },
-
-  {
     slug: "workflow-master",
-    title: "Workflow-Master",
+    title: "Workflow Master",
     tagline: "Software engineering operating system and AI assistant governance",
     category: "Tooling",
     year: "2026",
@@ -295,96 +295,6 @@ export const projects: Project[] = [
     ],
     image: "./projects/workflow-master.webp",
     repo: `${GH}/Workflow-Master`,
-  },
-
-  {
-    slug: "numpy-lab",
-    title: "NumPy-Lab",
-    tagline: "Interactive array computing, numerical operations and linear algebra",
-    category: "ML & Data",
-    year: "2026",
-    stack: ["NumPy", "Python", "Jupyter", "Colab"],
-    summary:
-      "Interactive Jupyter notebooks and exercises for mastering NumPy array computing, numerical operations, vectorization, and linear algebra recipes.",
-    highlights: [
-      "75-topic NumPy notebook masterclass",
-      "Vectorized mathematical operations and broadcasting benchmarks",
-      "Colab ready with 1-click cloud execution",
-    ],
-    image: "./projects/data-labs.webp",
-    repo: `${GH}/NumPy-Lab`,
-  },
-
-  {
-    slug: "pandas-lab",
-    title: "Pandas-Lab",
-    tagline: "Data wrangling, cleaning, aggregation and transformation recipes",
-    category: "ML & Data",
-    year: "2026",
-    stack: ["Pandas", "Python", "Data Wrangling", "Jupyter"],
-    summary:
-      "Practical playground for exploring Pandas: data wrangling, missing value imputation, multi-index aggregation, pivot transformation, and real-world data analysis recipes.",
-    highlights: [
-      "75-topic Pandas data wrangling masterclass",
-      "Multi-index and groupby aggregation recipes",
-      "Real-world dataset exploratory workflows",
-    ],
-    repo: `${GH}/Pandas-Lab`,
-    mark: "PANDAS",
-  },
-
-  {
-    slug: "opencv-lab",
-    title: "OpenCV-Lab",
-    tagline: "Computer vision playground, contour analysis & video processing",
-    category: "ML & Data",
-    year: "2026",
-    stack: ["OpenCV", "Python", "Computer Vision", "Pillow"],
-    summary:
-      "Interactive computer vision playground exploring OpenCV: image processing, contour analysis, spatial filtering, object detection, and video manipulation recipes.",
-    highlights: [
-      "Morphological operations and contour detection",
-      "Spatial filtering and color-space conversions",
-      "Object tracking and video manipulation recipes",
-    ],
-    repo: `${GH}/OpenCV-Lab`,
-    mark: "OPENCV",
-  },
-
-  {
-    slug: "ohio-caffe-table-menu",
-    title: "Ohio-Caffe-Table-Menu",
-    tagline: "Real-time QR table menu & cashier POS with pay-on-delivery flow",
-    category: "Web App",
-    year: "2026",
-    stack: ["Laravel 13", "React 19", "Tailwind CSS v4", "MySQL", "QR Menu"],
-    summary:
-      "Real-time QR table ordering and cashier POS system designed for dine-in cafes with pay-on-delivery at the table, instant kitchen tickets, and live sales reporting.",
-    highlights: [
-      "Dynamic table QR code generator for direct mobile ordering",
-      "Instant kitchen order dispatching and ticket lifecycle",
-      "Cashier POS desk with pay-on-delivery flow",
-    ],
-    repo: `${GH}/Ohio-Caffe-Table-Menu`,
-    mark: "OHIO",
-  },
-
-  {
-    slug: "monopoli-negeri-konoha",
-    title: "Monopoli-Negeri-Konoha",
-    tagline: "Indonesian political-economic satire board game on local Wi-Fi",
-    category: "Web App",
-    year: "2026",
-    stack: ["TypeScript", "WebSockets", "React 19", "Tailwind CSS"],
-    summary:
-      "15x15 board game satirizing Indonesian economic and political affairs with multi-device local Wi-Fi synchronization, live asset trading, and bankruptcy dynamics.",
-    highlights: [
-      "15x15 custom board tile mechanics and property ownership",
-      "Multi-device real-time state synchronization over local Wi-Fi",
-      "Satirical economic and political event cards",
-    ],
-    repo: `${GH}/Monopoli-Negeri-Konoha`,
-    mark: "KONOHA",
   },
 ]
 
@@ -407,8 +317,6 @@ export const stack = [
   "Pandas",
   "NumPy",
   "OpenCV",
-  "faster-whisper",
-  "Gemini API",
   "Streamlit",
   "Vite",
 ]

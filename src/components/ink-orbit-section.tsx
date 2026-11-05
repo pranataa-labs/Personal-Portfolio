@@ -66,7 +66,7 @@ export function InkOrbitSection() {
             "Aria Sastra · Lead Architect",
             "Aria Dev · Co-Author Pairing",
             "CI/CD · Automated Test Runner",
-            "EchoMind · Audio Intelligence",
+            "Ohio Caffe · Table Menu POS",
             "FleetPulse · Telemetry Server",
           ]}
           className="rounded-2xl border border-border overflow-hidden shadow-xs"
